@@ -1,9 +1,8 @@
 import {useForm} from "react-hook-form";
 import "./styles.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "@firebase/auth";
-import { getDefaultNormalizer } from "@testing-library/dom";
 
 export const NewPost = () =>{
 
