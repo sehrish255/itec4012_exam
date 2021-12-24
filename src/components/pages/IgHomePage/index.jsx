@@ -2,13 +2,14 @@ import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import {useEffect, useState, useContext} from 'react';
 import { useHistory } from "react-router-dom";
 import "./styles.css";
+//import {useEffect} from 'react';
 import { Post } from "../../Post";
 import IgsOrderContext from "../../../context/igsOrderContext";
 
 export const IgHomePage = () => {
 
     const history = useHistory();
-    const [setIgs] = useState([]);
+    const [igs, setIgs] = useState([]);
     const globalState = useContext(IgsOrderContext);
     const [filteredIgs, setFilteredIgs ] = useState([]);
 
@@ -49,9 +50,11 @@ useEffect(
 
       globalState.initializeIgs(formattedData);
 
+     // setLoading(false);
 
     }catch(err){
       console.log(err);
+     // setLoading(false);
     }
   }
 

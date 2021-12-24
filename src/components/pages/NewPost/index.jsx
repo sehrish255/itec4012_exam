@@ -23,6 +23,7 @@ export const NewPost = () =>{
       
 
     const submitIg = async (formVals) => {
+      //  const auth = getAuth();
         const formattedData ={
             fields:{
                 
@@ -32,6 +33,9 @@ export const NewPost = () =>{
                 caption:{
                     stringValue: formVals.caption
                 },
+              //  user:{
+              //      stringValue: auth.currentUser.user
+              //  }
             }
         }
 
